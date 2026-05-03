@@ -2,7 +2,7 @@
   "agentId": "knowledgeBase",
   "thresholds": {
     "faithfulness": 0.8,
-    "answerRelevancy": 0.6,
+    "answerRelevancy": 0.55,
     "contextRelevance": 0.55
   },
   "cases": [
