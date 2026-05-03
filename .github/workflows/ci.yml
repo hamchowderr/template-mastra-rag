@@ -71,6 +71,8 @@ jobs:
       - run: npm ci
       - name: Apply pgvector migration
         run: psql "postgres://postgres:postgres@localhost:5432/mastra" -f supabase/migrations/0001_pgvector.sql
+      - name: Create empty .env for CI
+        run: touch .env
       - name: Ingest corpus
         run: npm run ingest
         env:
@@ -78,8 +80,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.CI_OPENAI_API_KEY }}
           MASTRA_TELEMETRY_DISABLED: '1'
           NODE_ENV: test
-      - name: Create empty .env for CI
-        run: touch .env
       - name: Run eval gate
         run: npm run eval
         env:
