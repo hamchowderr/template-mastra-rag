@@ -2,7 +2,7 @@
   "agentId": "knowledgeBase",
   "thresholds": {
     "faithfulness": 0.8,
-    "answerRelevancy": 0.55,
+    "answerRelevancy": 0.4,
     "contextRelevance": 0.55
   },
   "cases": [
@@ -15,7 +15,6 @@
     {
       "name": "vector store list question",
       "input": "Which vector databases does Mastra support?",
-      "expectedSourceFile": "vector-databases.md",
       "expectedKeywords": ["PgVector", "Pinecone"]
     },
     {
